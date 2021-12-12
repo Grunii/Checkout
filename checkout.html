@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>TUC Sales</title>
+</head>
+
+<body>
+    <h1>TUC Sales</h1>
+    <h2>Kundkorg</h2>
+    <div class="cartcontainer">
+
+    </div>
+    <div class="formdiv">
+        <div class="divforform">
+        <form action="checkout_2.html" id="myForm" name="myForm"  onsubmit="validateForm()">
+            <div>
+          <Label for="fNamn">Förnamn</Label><br>
+          <input type="text" class="readyForVal" name="fNamn" id="fNamn" value="" pattern="^[a-öA-Ö '-]*$" placeholder="John" >
+        </div><br>
+        <div> 
+        <label for="eNamn">Efternamn</label><br>
+          <input type="text" class="readyForVal" name="eNamn" id="eNamn" value="" pattern="^[a-öA-Ö '-]*$" placeholder="Doe" required ><br><br>
+        </div>
+        <div>
+          <label for="eMail">E-post</label><br>
+          <input type="text" class="readyForVal" name="eMail" id="eMail" pattern="^[a-öA-Ö [a-ö0-9._%+-]+@[a-ö0-9.-]+\.[a-z]{1,3}"  placeholder="john.doe@hotmail.com" required >
+        </div><br>
+        <div>
+            <label for="tele">Telefon</label><br>
+            <input type="tel" class="readyForVal" name="tele" id="tele" placeholder="07X-XXXXXXX" pattern="^\d{10}|\d{3} \d{7}|\d{3}-\d{7}$" required  >
+        </div><br>
+        <div>
+            <label for="adress">Adress</label><br>
+            <input type="text" class="readyForVal" name="adress" id="adress" pattern="[a-öA-Ö0-9 ._%-]*$" placeholder="Skattsmitargränd 11" required >
+        </div><br>
+        <div>
+            <label for="postNummer">Postnummer</label><br>
+            <input type="text" class="readyForVal" name="postNummer" id="postNummer" pattern="^\d{3}\d{2}$|\d{3} \d{2}|\d{3}-\d{2}$" placeholder="123-45" required >    
+        </div> <br>
+        <div class="divforform">
+            <label> 
+               <input type="checkbox" checked="checked" name="checked" id="checked"  required> Jag godkänner att uppgifterna är korrekt ifyllda
+        
+            </div>
+        </div>
+        
+            </div>
+        </div>
+        <input type="submit">
+        
+        
+       
+</form>
+<div>       
+    
+</div>
+
+    <script src="cart.js"></script>
+    <script>
+        displayCart();
+    </script>
+</body>
+
+</html>

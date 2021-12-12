@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>TUC Sales</title>
+</head>
+
+<body>
+    <h1>TUC Sales</h1>
+    <h2>Betalning</h2>
+    
+        
+   
+    <div class="formdiv" id="formulär">
+     <p id="fenamn"></p>
+     <p id="adress"></p>
+     <p id="postNummer"></p>
+    </div>
+    
+    <div class="formdiv">
+      <form action="tack.html" onsubmit="validatePay()"> 
+            <div class="formdiv">
+                <div class="divforform">
+                    <div>
+                        <label for="nameoncard">Kortinnehavare</label>
+                        <input type="text" class="readyForVal" name="nameoncard" id="nameoncard" pattern="^[a-öA-Ö '-]*$" placeholder="John Doe" required >
+                        <label for="cardnumber">Kortnummer</label>
+                        <input type="text" class="readyForVal" name="cardnumber" id="cardnumber" pattern="^\d{16}|\d{4}-\d{4}-\d{4}-\d{4}$|\d{4} \d{4} \d{4} \d{4}$"  placeholder="5412-XXXX-XXXX-XXXX" required >
+                        <div><br>
+                        <label for="utgångsmån">Utgångsmånad</label>
+                        <input type="text" class="readyForVal" name="utgångsmån" id="utgångsmån" pattern="^\d{1,2}$" placeholder="01" required >
+                        <label for="utgångsår">Utgångsår</label>
+                        <input type="text" class="readyForVal" name="utgångsår" id="utgångsår" pattern="^\d{2,4}$" placeholder="2021" required >
+                        </div><br>
+                        <div class="divforform">
+                        <label for="CVV">CVV</label>
+                        <input type="text" class="readyForVal" name="CVV" id="CVV" pattern="^\d{3}$" placeholder="123" required >
+                        </div><br>
+                        <div class="divforform">
+                        <label> 
+                           <input type="checkbox" checked="checked" name="checked" id="checked"  required> Jag godkänner att uppgifterna är korrekt ifyllda
+                  <input type="submit"> 
+                        </div>
+                </div>
+                
+
+             
+        </form>
+   
+    </div>
+    </div>
+    
+    
+    <script src="cart.js"></script>
+    <script>displayCustomerName();</script>
+</body>
+
+</html>
