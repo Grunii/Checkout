@@ -26,14 +26,14 @@
                 <div class="divforform">
                     <div>
                         <label for="nameoncard">Kortinnehavare</label>
-                        <input type="text" class="readyForVal" name="nameoncard" id="nameoncard" pattern="^[a-öA-Ö '-]*$" placeholder="John Doe" required >
+                        <input type="text" class="readyForVal" name="nameoncard" id="nameoncard" pattern="^[A-Öa-ö '-]+\s[A-Öa-ö '-]+$" placeholder="John Doe" required >
                         <label for="cardnumber">Kortnummer</label>
                         <input type="text" class="readyForVal" name="cardnumber" id="cardnumber" pattern="^\d{16}|\d{4}-\d{4}-\d{4}-\d{4}$|\d{4} \d{4} \d{4} \d{4}$"  placeholder="5412-XXXX-XXXX-XXXX" required >
                         <div><br>
-                        <label for="utgångsmån">Utgångsmånad</label>
-                        <input type="text" class="readyForVal" name="utgångsmån" id="utgångsmån" pattern="^\d{1,2}$" placeholder="01" required >
+                        <label for="utgångsmån">Utgångsmånad/år</label>
+                        <input type="month" class="readyForVal" name="utgångsmån" id="utgångsmån"  placeholder="01" required >
                         <label for="utgångsår">Utgångsår</label>
-                        <input type="text" class="readyForVal" name="utgångsår" id="utgångsår" pattern="^\d{2,4}$" placeholder="2021" required >
+                        
                         </div><br>
                         <div class="divforform">
                         <label for="CVV">CVV</label>
@@ -55,6 +55,7 @@
     
     
     <script src="cart.js"></script>
+    <!--Funkar inte i gamla webbläsarversioner, tex; firefox 1.0 anser detta vara en odefinerad variable-->
     <script>displayCustomerName();</script>
 </body>
 

@@ -1,3 +1,10 @@
+<!--HTML och CSS analys: Jag har analyserat HTML OCH CSS i firefox 1.01 med hjälp av 
+    "caniuse.com" och jämförelse med hur sidan ser ut i senaste chrome.
+Första sidan. Det enda som vissas på första sidan är egentligen det som ligger i html dockumentet. vararorna på första sidan skrivs ut med hjälp av en function i javascript, då function inte fungerar i firefox 1.01 så kommer inget av det som skrivs ut upp på sidan. -->
+
+<!--sida2(kontakt): Input och text visas på sidan, men inget css vissas desutom fungerar ingen validering pga javascript stöd. samma sak gäller för sida 3(betalning)-->
+
+<!--sida4(tack)inget vissas på denna sida, jag har en backgrundsbild importerad i den sidan som inte vissas i webbläsaren. Men den finns där på något sätt, för att den täcker texten som finns på sida4. förmodligen har detta att göra med css. -->
 <!DOCTYPE html>
 <html>
 
@@ -17,6 +24,7 @@
    <button onclick="removeFromCart()">Clear cart</button>`
    
    <script src="cart.js"></script>
+   
     <script>
         displayProducts();
     </script>

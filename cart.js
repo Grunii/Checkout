@@ -1,3 +1,8 @@
+//Analys av javascript i firefox 1.0.1: jag har användt mig utav "caniuse.com" och den inbyggda javascript consolen i firefox för att se vad som inte fungerar. till att börja med så fungerar inte function() överhuvudtaget, så nästan allt javascript blir obsolet. Det finns metoder för att lösa detta, tex ett "polyfill". Polyfill används för att härma funktioner som finns i nyare webbläsare in i äldre webbläsare. Det finns mycket färdiga polyfill i biblotek som skulle gå att implementera. Jag har också användt mig av localstorage, vilket delvis stöds av firefox 1.0.1, men som tidigare nämnt så ligger alla localstorage variabler i functioner, därför fungerar det inte i den äldre webbläsaren. For-loopar fungerar inte heller, däremot skulle en while loop fungera, så det skulle kunna användas istället.
+
+//"let" Fungerar inte i den äldre webbläsaren, den skulle dock kunna bytas ut till "var", som stöds i samtliga webbläsar verisoner. 
+
+
 
 // Array med alla produkter
 const products = [
@@ -5,7 +10,7 @@ const products = [
     { id: 2, title: "Godare", description: "Bra", price: 456 },
     { id: 3, title: "Godast", description: "Väldigt bra", price: 789 },
 ];
-
+//get ett random id till den som handlar
 function getCustomerId() {
     let customerId = localStorage.getItem("customerid");
 
@@ -27,7 +32,7 @@ function addToCart(id) {
         }
     }
 }
-//funktion som rensar localstorage, går bara att komma åt från förstasidan.
+//funktion som rensar localstorage, går bara att komma åt från förstasidan och när man är på tacksidan.
 //används för att rensa varukorgen.
 //skulle gå att rensa individuela produkter från varukorgen genom att ge varje produkt ett individuelt id, men det han jag inte ge mig på.
 function removeFromCart(){
@@ -75,7 +80,9 @@ function displayProducts() {
 //funktion som validerar att checkboxen är checked i kpntaktformuläret
 //funktionen sparar också värdena för förnamn,efternamn,adress och postnummer i localstorage
  var validateForm =function (){
+    
     var ph=document.querySelector("#checked") 
+    utg=document.getElementById("utgångsmån")
     if(ph.value.match){
     
     
@@ -96,7 +103,8 @@ function displayProducts() {
       window.localStorage.getItem("postNummer");
     alert("Uppgifter Godkända")
 }else{
-    alert("uppgifter felaktiga")
+    
+    alert("Felaktiga Uppgifter!")
 }
 }
 
